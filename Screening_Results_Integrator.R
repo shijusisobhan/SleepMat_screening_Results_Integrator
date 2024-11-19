@@ -67,6 +67,8 @@ combine_all_folders <- function(main_excel_file) {
 # Combine data from all folders
 final_result <- combine_all_folders(main_excel_file)
 
+final_result<-final_result[, c(ncol(final_result), 1:(ncol(final_result) - 1))]
+
 # Write the results
 mainDir <- dirname(main_excel_file)
 
