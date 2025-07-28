@@ -48,7 +48,7 @@ combine_all_folders <- function(main_excel_file) {
     run <- main_data[[1]][i]
     
     # List all Excel files in the folder
-    files <- list.files(folder_path, pattern = "*.xls", full.names = TRUE)
+    files <- list.files(folder_path, pattern = "screening_data\\.xls$", full.names = TRUE)
     
     # Read the data from both files
     folder_data <- read_excel(files)
